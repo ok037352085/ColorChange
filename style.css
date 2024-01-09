@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition-delay: 1.2s;
+}
+
+.box
+{
+    position: relative;
+    width: 600px;
+    text-align: center;
+}
+
+.change-bg h1
+{
+    font-size: 24px;
+    letter-spacing: .8s;
+    color: white;
+    -webkit-text-stroke: 1px #000;
+    margin-bottom: 10px;
+}
+
+.change-bg .input-group input 
+{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: .8s;
+    outline: none;
+    border: 1px solid #333;
+    padding: 0 25px;
+}
+
+.change-bg .input-group .newColor-input
+{
+    background: white;
+    width: 350px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+}
+
+.change-bg .input-group .btn
+{
+    background: #666;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    margin-left: -7px;
+    transition: .5s;
+}
+
+.change-bg .input-group .btn:hover
+{
+    background: #222;
+
+}
+
+.bg-text
+{
+    position: absolute;
+    top: 200px;
+    font-size: 100px;
+    color: rgba(0, 0, 0, .1);
+    font-weight: 700;
+}
+
+.bg-text.fade
+{
+    animation: animateFade 1.2s linear;
+}
+
+@keyframes animateFade
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.clipPath-circle
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: clip-path 1.2s ease-out;
+    clip-path: circle(1% at 0 0);
+}
+
+.clipPath-circle.active
+{
+    clip-path: circle(150% at 0 0);
+}
